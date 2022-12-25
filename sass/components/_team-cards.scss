@@ -1,0 +1,103 @@
+.team {
+  background-color: $background-dark;
+  padding-bottom: 3rem;
+
+  .card {
+    max-width: 15rem;
+    height: 15rem;
+    overflow: hidden;
+    border-radius: 2.19rem 4.37rem;
+    border-color: $background-dark-secondary;
+    margin: 1rem 2rem;
+
+    @include responsive(tablet-portrait) {
+      max-width: 10rem;
+      height: 10rem;
+      margin: 1rem 1.5rem;
+    }
+
+    @include responsive(phone) {
+      max-width: 18rem;
+      height: 18rem;
+      margin: 0 auto;
+      margin-bottom: 1rem;
+    }
+
+    &-text {
+      margin-top: 1rem;
+
+      a {
+        color: white;
+        transition: color 0.3s;
+
+        &:hover {
+          color: $accent-color;
+        }
+      }
+
+      i {
+        font-size: 1.5rem;
+      }
+    }
+
+    &-img-overlay {
+      background-color: rgba(0, 0, 0, 0.75);
+      width: 100%;
+      opacity: 0;
+      object-fit: cover;
+      position: absolute;
+      transition: 0.3s;
+
+      & div.card-text {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        transition: 0.3s;
+      }
+
+      &:hover {
+        opacity: 1;
+        & div.card-text {
+          transform: translateY(-4rem);
+
+          @include responsive(tablet-portrait) {
+            transform: translateY(-1rem);
+          }
+
+          @include responsive(phone) {
+            transform: translateY(-5rem);
+          }
+        }
+      }
+    }
+    &-deck {
+      margin-bottom: 2.5rem;
+      width: 100%;
+      margin: 0 auto;
+    }
+    &-img {
+      border-radius: 2.19rem 4.37rem;
+      width: 100%;
+    }
+  }
+
+  &-member {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.75rem;
+  }
+
+  .member-info h3 {
+    font-size: 1.5rem;
+
+    @include responsive(tablet-portrait) {
+      font-size: 1.3rem;
+    }
+  }
+
+  .member-info h5 {
+    font-size: 1rem;
+    color: $accent-color;
+    text-transform: uppercase;
+  }
+}

@@ -1,0 +1,39 @@
+head,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+.title {
+    color: #ee6e57;
+    text-align: center;
+}
+
+#desc {
+    margin: auto;
+    width: 50%;
+    border: 3px solid black;
+    padding: 10px;
+    color: antiquewhite;
+    font-size: medium;
+}
+
+.ev-img
+{
+    border-radius: 10%;
+}
+
+.ev-description
+{
+    padding: 25px;
+    margin: 20px;
+    font-size: large;
+    color: antiquewhite;
+}
+
+.p1 {
+    font-size: medium;
+}
+
+
+  
